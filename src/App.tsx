@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import {  useState } from 'react';
 import './App.css'
 import { useCounter } from './store/useStore';
 // import uuid from "uuid"
@@ -9,7 +9,7 @@ import { useCounter } from './store/useStore';
 
 function App() {
 
-  
+  // const sataeRef = useRef<>()
 
   // const[num , setNum] = useState<NumberState>(0)
   const[num , setNum] = useState<number>(0)
@@ -33,7 +33,7 @@ function App() {
 
     <>
       <h1>Zustand And React</h1>
-      <p>{count} : {status}</p>
+      <p className={status === "even" ? "even" : "odd"}>{count} : {status}</p>
       <button onClick={()=> {
         addCount();
        checkOddOrEven()
